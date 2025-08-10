@@ -1,0 +1,73 @@
+/* ---------- Simple reset ---------- */
+* { box-sizing: border-box; }
+html,body { margin:0; padding:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#222; }
+a { color:inherit; text-decoration:none; }
+
+/* ---------- Layout helpers ---------- */
+.wrap { max-width:1100px; margin:0 auto; padding:20px; }
+.header-inner, .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+
+/* ---------- Header ---------- */
+.site-header { background: #d6336c; color:#fff; position:sticky; top:0; z-index:50; }
+.brand h1 { margin:0; font-size:20px; letter-spacing:1px; }
+.brand .tagline { margin:0; font-size:12px; opacity:0.95; }
+.main-nav a { margin-left:16px; color:#fff; font-weight:600; }
+.main-nav a.active { text-decoration:underline; }
+.whatsapp-cta { background:#fff; color:#d6336c; padding:8px 12px; border-radius:6px; font-weight:700; }
+
+/* ---------- Hero ---------- */
+.hero { background: linear-gradient(180deg, #fff0f6 0%, #fff 100%); padding:28px 0; }
+.hero-inner { display:flex; gap:24px; align-items:center; }
+.hero-text h2 { margin:0 0 10px 0; color:#8b0f1a; font-size:26px; }
+.hero-text p { margin:0 0 16px 0; color:#5a1e2a; }
+.hero-actions .btn { margin-right:10px; }
+.hero-image img { width:320px; max-width:40vw; border-radius:12px; box-shadow:0 6px 18px rgba(214,51,108,0.15); }
+
+/* ---------- Buttons ---------- */
+.btn { display:inline-block; padding:10px 14px; border-radius:8px; cursor:pointer; border:0; font-weight:700; background:#fff; color:#a4161a; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+.btn.primary { background:#d6336c; color:#fff; }
+.btn.ghost { background:transparent; color:#a4161a; border:2px solid rgba(164,22,26,0.06); }
+.btn.small { padding:8px 12px; font-size:14px; }
+
+/* ---------- Sections ---------- */
+.about { background:#fff; border-radius:8px; padding:18px; box-shadow:0 4px 12px rgba(214,51,108,0.06); margin-top:12px; }
+.services-preview .cards { display:flex; gap:16px; flex-wrap:wrap; margin-top:12px; }
+.card { background:#fff; padding:16px; border-radius:10px; flex:1 1 260px; box-shadow:0 6px 18px rgba(214,51,108,0.06); }
+
+/* ---------- Service list ---------- */
+.service-list { list-style:none; padding:0; margin:18px 0 60px 0; display:grid; gap:14px; }
+.service-item { display:flex; justify-content:space-between; align-items:center; background:#fff; border-radius:10px; padding:12px 16px; box-shadow:0 6px 18px rgba(214,51,108,0.04); }
+.small-muted { color:#6b3a45; opacity:0.9; }
+
+/* ---------- CTA strip ---------- */
+.strip { background:#f9e6ef; padding:22px 0; margin-top:10px; }
+.cta-inner { display:flex; justify-content:space-between; align-items:center; }
+
+/* ---------- Footer ---------- */
+.site-footer { background:#d6336c; color:#fff; padding:16px 0; margin-top:40px; }
+
+/* ---------- Popup booking ---------- */
+.popup-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:200; }
+.popup { background:#fff; width:100%; max-width:420px; border-radius:12px; padding:18px; position:relative; box-shadow:0 20px 40px rgba(0,0,0,0.25); }
+.popup .close { position:absolute; right:10px; top:6px; background:none; border:none; font-size:26px; color:#d6336c; cursor:pointer; }
+.booking-form label { display:block; margin-bottom:10px; font-weight:600; color:#8b0f1a; }
+.booking-form input { width:100%; padding:10px; border-radius:8px; border:1.2px solid #e8b0c2; margin-top:6px; }
+
+/* ---------- Gallery ---------- */
+.gallery-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:12px; }
+.gallery-grid img { width:100%; height:160px; object-fit:cover; border-radius:8px; cursor:pointer; box-shadow:0 8px 20px rgba(214,51,108,0.06); }
+
+/* ---------- Lightbox ---------- */
+.lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:300; }
+.lightbox img { max-width:92%; max-height:86%; border-radius:8px; }
+
+/* ---------- Contact ---------- */
+.contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:12px; }
+.contact-card { background:#fff; padding:14px; border-radius:8px; box-shadow:0 6px 18px rgba(214,51,108,0.06); }
+
+/* ---------- Responsiveness ---------- */
+@media (max-width:880px) {
+  .hero-inner { flex-direction:column-reverse; text-align:center; }
+  .header-inner, .footer-inner { flex-direction:column; gap:8px; text-align:center; }
+  .main-nav a { margin-left:8px; display:inline-block; margin-top:6px; }
+}

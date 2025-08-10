@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — S.K Beauty Parlour</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <h1>S.K Beauty Parlour</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="whatsapp-cta" href="https://wa.me/919997357742" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2>Our Work — Gallery</h2>
+    <p class="small-muted">Click any image to view larger. Replace files inside the /images folder.</p>
+
+    <div id="galleryGrid" class="gallery-grid">
+      <!-- Images are loaded by script.js. Use filenames image1.jpg..image12.jpg in /images -->
+    </div>
+  </main>
+
+  <!-- Simple lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" alt="Preview" />
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong>S.K Beauty Parlour</strong><br />
+        Premnagar, Dehradun
+      </div>
+      <div>
+        <a href="tel:9997357742">9997357742</a><br/>
+        <a href="https://wa.me/919997357742" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

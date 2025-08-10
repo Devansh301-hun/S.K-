@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>S.K Beauty Parlour</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <h1>S.K Beauty Parlour</h1>
+        <p class="tagline">Your beauty, our passion</p>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="whatsapp-cta" href="https://wa.me/919997357742" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h2>Professional beauty care in Premnagar, Dehradun</h2>
+          <p>Skincare • Threading • Waxing • Bridal Makeup — personalized care for every client.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="services.html">Book a Service</a>
+            <a class="btn ghost" href="gallery.html">View Gallery</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/hero-placeholder.jpg" alt="Salon preview" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about wrap">
+      <h3>About S.K Beauty Parlour</h3>
+      <p>
+        S.K Beauty Parlour provides expert beauty services with hygienic practices and a personal touch.
+        Our experienced team uses quality products to make you feel confident and beautiful.
+      </p>
+    </section>
+
+    <section class="services-preview wrap">
+      <h3>Popular Services</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>Eyebrow Threading</h4>
+          <p>Clean shaping and styling for a polished look.</p>
+          <button onclick="openBooking('Eyebrow Threading')" class="btn small">Book Slot</button>
+        </div>
+        <div class="card">
+          <h4>Facial Treatments</h4>
+          <p>Deep-cleansing and glow treatments tailored to your skin.</p>
+          <button onclick="openBooking('Facial Treatments')" class="btn small">Book Slot</button>
+        </div>
+        <div class="card">
+          <h4>Waxing</h4>
+          <p>Quick, hygienic waxing for smooth results.</p>
+          <button onclick="openBooking('Waxing')" class="btn small">Book Slot</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta strip">
+      <div class="wrap cta-inner">
+        <div>
+          <h3>Want to book now?</h3>
+          <p>Click below and fill a short form — we will get the booking message on WhatsApp.</p>
+        </div>
+        <div>
+          <button class="btn primary" onclick="openBooking('General Booking')">Start Booking</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Booking popup (shared on all pages) -->
+  <div class="popup-overlay" id="popupBooking" aria-hidden="true">
+    <div class="popup">
+      <button class="close" onclick="closeBooking()" aria-label="Close">&times;</button>
+      <h3>Book a Slot</h3>
+      <form id="bookingForm" onsubmit="submitBooking(event)" class="booking-form">
+        <label>
+          Your name *
+          <input id="customerName" name="customerName" required />
+        </label>
+        <label>
+          Phone number * (10 digits)
+          <input id="customerPhone" name="customerPhone" pattern="[0-9]{10}" required />
+        </label>
+        <label>
+          Service *
+          <input id="serviceType" name="serviceType" readonly required />
+        </label>
+        <label>
+          Budget (optional)
+          <input id="budget" name="budget" placeholder="e.g. 500" />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Send via WhatsApp</button>
+          <button type="button" class="btn ghost" onclick="closeBooking()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <strong>S.K Beauty Parlour</strong><br />
+        Premnagar, Dehradun
+      </div>
+      <div>
+        <a href="tel:9997357742">9997357742</a><br/>
+        <a href="https://wa.me/919997357742" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
